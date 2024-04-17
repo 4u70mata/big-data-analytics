@@ -18,7 +18,7 @@ Although the NameNode and DataNode processes can be run on a single machine, HDF
 An architecture where the only single point failure is the NameNode, everything aside the NameNode contains all information or metadata about the location of each block and its replicas thus can serve the clien on read/write operations , and block operations such as making sure the replications are built back up in case of DataNode failure.
 
 <p align="center">
-  <img src="find some picture of single point failure NameNode Architecture" alt ="Single point Failure Hadoop cluster">
+  <img src="https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/images/hdfsarchitecture.png" alt ="Single point Failure SPOF Hadoop cluster" width="400">
 </p>
 
 ###### Hadoop 2.x< and High Availability Feature :
@@ -27,13 +27,13 @@ This influenced future Hadoop Versions, first hadoop 2.X introduced a solutionto
 A good practice is to run an odd number of JNs 3, 5, 7, ... , in general when running a number N of JNs the system can tolerate at most (N - 1)/2 failures.
 
 <p align="center">
-  <img src=" " alt="Active/Passive Configuration for the High Availability (>2.x) hadoop feature">
+  <img src="https://hadoopabcd.wordpress.com/wp-content/uploads/2015/02/sharededit-with-zk.png" alt="Active/Passive Configuration for the High Availability (>2.x) hadoop feature" width="400">
 </p>
 Requirements :
 	-the machine responsible for running the NameNode ( active/Standby ) should have equivalent hardware, and to what well be used in a non-HA cluster.
 	-the JournalNodes machines : these deamons are relatively lightweight, then they may be collocated on machines with other hadoop deamons such as NameNodes, JobTracker, the YARN RessourceManager  
 
 
-[Thu Apr 18 00:01:22 CEST 2024] TOBECON
+[Thu Apr 18 00:01:22 CEST 2024] TOBECON 
 
 
